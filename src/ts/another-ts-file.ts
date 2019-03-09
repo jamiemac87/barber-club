@@ -1,0 +1,1 @@
+export const anotherLogStatement = () => console.log('Another log');
