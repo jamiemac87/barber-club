@@ -64,7 +64,7 @@ html * {
 .intro-section {
     width: 100vw;
     padding: 4rem 2rem;    
-    background-image: url(../img/repeating-pattern.png);
+    background-image: url("repeating-pattern.png");
     background-repeat: repeat;
     background-size: 100px;
 }
