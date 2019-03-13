@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "parcel serve src/index.html -d tmp",
-    "build": "rm -rf dist && parcel build src/index.html --public-url .",
+    "build": "rm -rf dist && parcel build src/index.html --public-url . && cp ./src/CNAME ./dist",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
