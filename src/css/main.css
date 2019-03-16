@@ -1,5 +1,51 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+@font-face {
+    font-family: 'BigNoodleTitling';
+    src: url('BigNoodleTitling-Oblique.woff2') format('woff2'),
+        url('BigNoodleTitling-Oblique.woff') format('woff'),
+        url('BigNoodleTitling-Oblique.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('icomoon.eot?upsj4w');
+    src:  url('icomoon.eot?upsj4w#iefix') format('embedded-opentype'),
+      url('icomoon.ttf?upsj4w') format('truetype'),
+      url('icomoon.woff?upsj4w') format('woff'),
+      url('icomoon.svg?upsj4w#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  
+/* 
+COLOURS 
+===
+Black: #1C1D1E
+*/
+
 
 /* RESET */
 html, body, div, span, applet, object, iframe,
@@ -49,7 +95,7 @@ table {
 /* GLOBAL */
 html {
     font-family: 'Open Sans', sans-serif; 
-    font-size: 14px;   
+    font-size: 14px;       
 }
 
 html * {
@@ -61,22 +107,151 @@ html * {
     width: 100vw;
 }
 
-.intro-section {
+.section {
     width: 100vw;
-    padding: 4rem 2rem;    
-    background-image: url("repeating-pattern.png");
+    padding: 4rem 2rem;        
     background-repeat: repeat;
-    background-size: 100px;
+    background-size: 100px;   
+}
+
+.intro-section,
+.prices-section,
+.follow-us-section {
+    background-image: url("repeating-pattern-dark.png");
 }
 
 .intro-section p {
     text-align: center;
-    max-width: 800px;
+    max-width: 550px;
     margin: 0 auto;
     font-size: 1.5rem;    
     line-height: 2.5rem;
     letter-spacing: 1px;
-    color: #292F36;
+    color:white;
+    font-weight: 300;
+}
+
+.section-title {
+    font-family: 'BigNoodleTitling';
+    color: #1C1D1E;
+    font-size: 6rem;
+    text-shadow: 2px 2px 0px #fff, 4px 4px 0px #1C1D1E;
+    text-align: center;
+    letter-spacing: .25rem;
+    margin-bottom: 1.5rem
+}
+
+.opening-times-section {    
+    background-color: white;
+}
+
+.opening-time,
+.service {
+    display: table;        
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.opening-time:last-of-type,
+.service:last-of-type {
+    padding-bottom: 0;
+}
+
+.opening-time__day,
+.opening-time__times,
+.service-name,
+.service-price {
+    display: table-cell;
+    width: 50%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.opening-time__times,
+.service-price {
+    text-align: right;
+    text-transform: lowercase;
+}
+
+.opening-times-list,
+.services-list {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 2px solid #1C1D1E;
+    box-shadow: 2px 2px 0px #fff, 4px 4px 0px #1C1D1E;
+}
+
+.services-list hr {
+    margin: 1rem;
+    border: 1px solid white;
+}
+
+.service-discount {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.prices-title,
+.follow-us-title {
+    color: white;
+    text-shadow: 3px 3px 0px #1C1D1E, 4px 4px 0px white;
+}
+
+.services-list {
+    border: 2px solid white;
+    box-shadow: 2px 2px 0px #1C1D1E, 4px 4px 0px white;    
+}
+
+.service-price,
+.service-name {
+    color: white;
+}
+
+.address {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+}
+
+.address__first-line,
+.address__city,
+.address__postcode {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding-bottom: .5rem;
+}
+
+.address__postcode {
+    padding-bottom: 0;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    color: black;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 2px solid #1C1D1E;
+    text-decoration: none;    
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button [class^="icon-"] {
+    font-size: 3rem;    
+}
+
+.button.instagram-btn {
+    color: white;
+    border-color: white;
 }
 
 @media (min-width: 800px) {

@@ -2,7 +2,7 @@
   "scripts": {
     "start": "parcel serve src/index.html -d tmp",
     "build": "rm -rf dist && parcel build src/index.html --public-url . && cp ./src/CNAME ./dist",
-    "deploy": "gh-pages -d dist"
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
