@@ -8,6 +8,7 @@
         url('BigNoodleTitling-Oblique.ttf')  format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -19,6 +20,7 @@
       url('icomoon.svg?upsj4w#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
   
   [class^="icon-"], [class*=" icon-"] {
@@ -38,6 +40,10 @@
   
   .icon-instagram:before {
     content: "\ea92";
+  }
+
+  .icon-facebook2:before {
+    content: "\ea91";
   }
   
 /* 
@@ -94,7 +100,7 @@ table {
 
 /* GLOBAL */
 html {
-    font-family: 'Open Sans', sans-serif; 
+    font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif; 
     font-size: 14px;       
 }
 
@@ -230,28 +236,58 @@ html * {
 .button {
     display: block;
     text-align: center;
-    color: black;
+    /* color: black; */
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
     padding: 1rem;
     font-size: 1.5rem;
     text-transform: uppercase;
+    /* border: 2px solid #1C1D1E; */
+    text-decoration: none;  
+    transition: all .3s ease-in;    
+}
+
+.button.black {
+    color: black;
     border: 2px solid #1C1D1E;
-    text-decoration: none;    
+    box-shadow: 2px 2px 0px white, 0px 0px 0px #1C1D1E;
+}
+
+.button.white {
+    color: white;
+    border: 2px solid white;
+    box-shadow: 2px 2px 0px #1C1D1E, 0px 0px 0px white;
 }
 
 .button:hover {
     cursor: pointer;
 }
 
+.button.black:hover {
+    color: white;
+    border-color: white;
+    background-color: black;
+    box-shadow: 2px 2px 0px white, 4px 4px 0px #1C1D1E; 
+}
+
+.button.white:hover {
+    color: #1C1D1E;
+    border-color: #1C1D1E;
+    background-color: white;
+    box-shadow: 2px 2px 0px #1C1D1E, 4px 4px 0px white; 
+}
+
 .button [class^="icon-"] {
     font-size: 3rem;    
 }
 
-.button.instagram-btn {
-    color: white;
-    border-color: white;
+.follow-us-section .button {
+    margin-bottom: 1rem;
+}
+
+.follow-us-section .button:last-of-type {
+    margin-bottom: 0;
 }
 
 @media (min-width: 800px) {
