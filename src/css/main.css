@@ -137,6 +137,10 @@ html * {
     font-weight: 300;
 }
 
+.intro-section p a {
+    color: white;
+}
+
 .section-title {
     font-family: 'BigNoodleTitling';
     color: #1C1D1E;
